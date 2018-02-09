@@ -1,0 +1,14 @@
+<?php
+/*
+
+	Stockbird program for timing your buy's and sell's
+	Written by borre 2017
+	Open Source - please free to use, share and contribute.
+
+*/
+
+	ini_set('display_errors', 0);
+	error_reporting(E_NOTICE);
+	ini_alter('date.timezone','Europe/Helsinki');
+
+  
