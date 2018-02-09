@@ -1,4 +1,2 @@
-array(
-  $data = 'http://quotes.wsj.com/FI/CRA1V';
-
-);
+$datasource   = 'http://quotes.wsj.com/FI/CRA1V';
+$
