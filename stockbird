@@ -6,9 +6,42 @@
 	Open Source - please free to use, share and contribute.
 
 */
+# Presets
+
+	$dir    		= 'companies';
 
 	ini_set('display_errors', 0);
 	error_reporting(E_NOTICE);
 	ini_alter('date.timezone','Europe/Helsinki');
 
-  
+	// Get company-list - what to track
+	$companies 	= scandir($dir);
+	unset($companies[0]);
+	unset($companies[1]);
+
+	# print_r($companies);
+
+echo "\n\n";
+
+	foreach($companies as $company):
+
+		print($company);
+
+	endforeach;
+
+echo "\n\n";
+
+	$url = "http://quotes.wsj.com/FI/CRA1V";
+
+# Let's get the data
+
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_URL, $url);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($curl, CURLOPT_HEADER, false);
+	$data = curl_exec($curl);
+
+print_r($data);
+
+
+echo "\n\n";

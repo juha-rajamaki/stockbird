@@ -8,13 +8,21 @@ Stockbird will find you stocks to invest and tells you when to invest on them as
 first:
 
    - stock price integration for timing
+	 - top price in a year, lowest price in a year
+	 - Results dates (dates when it is possible that stock will fly)
+
+later
+
+	- Notify from stock price crash
 
 integration:
 
+	- divident and divident pay date
+	- PE-Ratio (Price per earnings)
 	- comparing the investment possibilities
-	- divident
 	- simplywall.st (what should be the price of the stock based on analytics)
 	- finder (what could the direction of the stock in general)
+	- information what other have bought?
 
 buy hand:
 
