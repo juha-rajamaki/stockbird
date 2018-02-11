@@ -1,6 +1,12 @@
 <?php
 
 $companies = [
-    array("wsjlink"  => 'http://quotes.wsj.com/FI/CONSTI'),
+    array("wsjlink"  => 'http://quotes.wsj.com/FI/OKDAV/'),
     array("wsjlink"  => 'http://quotes.wsj.com/FI/OKDBV/'),
+    array("wsjlink"  => 'http://quotes.wsj.com/XE/DBK'),
+    array("wsjlink"  => 'http://quotes.wsj.com/FI/CONSTI'),
+    array("wsjlink"  => 'http://quotes.wsj.com/FI/FIA1S'),
+    array("wsjlink"  => 'http://quotes.wsj.com/FR/SOI'),
+    array("wsjlink"  => 'http://quotes.wsj.com/UK/BARC'),
+    array("wsjlink"  => 'http://quotes.wsj.com/FI/CTY1S'),
 ];
