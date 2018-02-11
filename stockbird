@@ -9,45 +9,42 @@
 # 	Presets
 
 		$dir    		= 'companies';
-		$url = "http://quotes.wsj.com/FI/CRA1V";
+		$url = "http://quotes.wsj.com/FI/CONSTI";
 
 		ini_set('display_errors', 0);
 		error_reporting(E_NOTICE);
 		ini_alter('date.timezone','Europe/Helsinki');
 
-#		Get company-list - what to track
-		$companies 	= scandir($dir);
-		unset($companies[0]);
-		unset($companies[1]);
+#		List of companies to track
 
-#	print_r($companies);
+		require_once("track.list");
 
 echo "\n\n";
 
 	foreach($companies as $company):
-		print($company);
+
+		$url = $company['wsjlink'];
+
+		# 	Let's get the data
+				$curl = curl_init();
+				curl_setopt($curl, CURLOPT_URL, $url);
+				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($curl, CURLOPT_HEADER, false);
+				$data = curl_exec($curl);
+
+		# 	Clean up the white spaces from data for better matching
+				$data = str_replace(" ", "", $data);
+
+		#		Orderize data between divs
+				preg_match_all('#quote_val[^>]*>(.*?)</span>#s', $data, $dataclean);
+				$stock_price = $dataclean[1][0];
+
+		# Visualize
+
+				print_r($stock_price);
+				echo "\n";
+
 	endforeach;
 
+print_r($data);
 echo "\n";
-
-# 	Let's get the data
-		$curl = curl_init();
-		curl_setopt($curl, CURLOPT_URL, $url);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($curl, CURLOPT_HEADER, false);
-		$data = curl_exec($curl);
-
-# 	Clean up the white spaces from data for better matching
-		$data = str_replace(" ", "", $data);
-
-#		Orderize data between divs
-		preg_match_all('#quote_val[^>]*>(.*?)</span>#s', $data, $data);
-
-		$stock_price = $data[1][0];
-
-
-
-print_r($stock_price."¢");
-
-
-echo "\n\n";

@@ -1,0 +1,6 @@
+<?php
+
+$companies = [
+    array("wsjlink"  => 'http://quotes.wsj.com/FI/CONSTI'),
+    array("wsjlink"  => 'http://quotes.wsj.com/FI/OKDBV/'),
+];
