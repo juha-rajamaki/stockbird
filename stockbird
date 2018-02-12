@@ -19,7 +19,7 @@
 
 		require_once("track.list");
 
-echo "\n\n";
+echo "\n";
 
 	foreach($companies as $company):
 
@@ -60,15 +60,14 @@ echo "\n\n";
 				print_r($stock_price);
 				echo "\n";
 
-#				if($stock_move_today < 0) {$stock_move_today = "".chr(27)."[1;32m+$stock_move_today". chr(27) . "[0m".""; }
+#				$xoo = str_replace("%", " ", $stock_move_today);
+#				$xoo = float(floor($xoo));
+#				print($xoo);
+
+#				if($xoo < 0) {$stock_move_today = "".chr(27)."[1;32m+$stock_move_today". chr(27) . "[0m".""; }
+
 				print_r($stock_move_today);
 
 				echo "\n\n";
 
 	endforeach;
-
-
-#preg_match_all('#<div[^>]*>(.*?)</div>#s', $data, $data);
-#print_r($stock_move_today);
-
-echo "\n";
