@@ -37,22 +37,38 @@ echo "\n\n";
 		# 	Clean up the white spaces from data for better matching
 				$data = str_replace(" ", "", $data);
 
-		#		Orderize data between divs
+				#		Stock price
+
 				preg_match_all('#quote_val[^>]*>(.*?)</span>#s', $data, $datamatch);
 				$stock_price = $datamatch[1][0];
 
+				#		Company name
+
 				preg_match_all('#companyName[^>]*>(.*?)</span>#s', $data, $datamatch);
 				$company_name = $datamatch[1][0];
+
+				#		Stock move today
+
+				preg_match_all('#quote_changePer[^>]*>(.*?)</span>#s', $data, $datamatch);
+				$stock_move_today = $datamatch[1][0];
 
 		#		Visualize
 
 				print_r($company_name);
 				echo "\n";
+
 				print_r($stock_price);
+				echo "\n";
+
+#				if($stock_move_today < 0) {$stock_move_today = "".chr(27)."[1;32m+$stock_move_today". chr(27) . "[0m".""; }
+				print_r($stock_move_today);
+
 				echo "\n\n";
 
 	endforeach;
 
-#		preg_match_all('#<div[^>]*>(.*?)</div>#s', $data, $data);
+
+#preg_match_all('#<div[^>]*>(.*?)</div>#s', $data, $data);
+#print_r($stock_move_today);
 
 echo "\n";
