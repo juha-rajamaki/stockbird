@@ -20,7 +20,8 @@
 		require_once("track.list");
 		asort($companies);
 
-echo "\n";
+echo "Collecting data ...\n\n";
+$printer = "";
 
 	foreach($companies as $company):
 
@@ -55,7 +56,7 @@ echo "\n";
 
 		#		Visualize
 
-				$printer = "".$company_name."";
+				$printer .= "".$company_name."";
 				$printer .= " ¡ ";
 				$printer .= "".$stock_price."";
 				$printer .= " ¡ ";
@@ -68,8 +69,8 @@ echo "\n";
 				}
 				$printer .= "\n";
 
-				echo $printer;
-
 	endforeach;
+
+echo $printer;
 
 echo "\n";
