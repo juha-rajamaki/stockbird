@@ -18,6 +18,7 @@
 #		List of companies to track
 
 		require_once("track.list");
+		asort($companies);
 
 echo "\n";
 
