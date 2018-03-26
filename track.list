@@ -9,4 +9,5 @@ $companies = [
     array("wsjlink"  => 'http://quotes.wsj.com/FR/SOI'),
     array("wsjlink"  => 'http://quotes.wsj.com/UK/BARC'),
     array("wsjlink"  => 'http://quotes.wsj.com/FI/CTY1S'),
+    array("wsjlink"  => 'http://quotes.wsj.com/FI/NOKIA'),
 ];
