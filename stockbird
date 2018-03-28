@@ -40,17 +40,14 @@ $printer = "";
 				$data = str_replace(" ", "", $data);
 
 				#		Stock price
-
 				preg_match_all('#quote_val[^>]*>(.*?)</span>#s', $data, $datamatch);
 				$stock_price = $datamatch[1][0];
 
 				#		Company name
-
 				preg_match_all('#companyName[^>]*>(.*?)</span>#s', $data, $datamatch);
 				$company_name = $datamatch[1][0];
 
 				#		Stock move today
-
 				preg_match_all('#quote_changePer[^>]*>(.*?)</span>#s', $data, $datamatch);
 				$stock_move_today = $datamatch[1][0];
 
@@ -62,6 +59,7 @@ $printer = "";
 				$printer .= " ¡ ";
 				$move = floatval($stock_move_today);
 
+				# Let's put some colors				
 				if (strpos($move, '-') !== false) {
 				    $printer .= "".chr(27)."[1;31m$stock_move_today". chr(27) . "[0m".""; // -
 				} else {
