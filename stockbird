@@ -6,6 +6,9 @@
 		Open Source - please free to use, share and contribute.
 
 */
+
+$show = $argv[1]; // up, down or both
+
 # 	Presets
 
 		$dir    		= 'companies';
@@ -50,22 +53,54 @@ $printer = "";
 				#		Stock move today
 				preg_match_all('#quote_changePer[^>]*>(.*?)</span>#s', $data, $datamatch);
 				$stock_move_today = $datamatch[1][0];
+				$move = floatval($stock_move_today);
 
 		#		Visualize
 
-				$printer .= "".$company_name."";
-				$printer .= " ¡ ";
-				$printer .= "".$stock_price."";
-				$printer .= " ¡ ";
-				$move = floatval($stock_move_today);
+				# Let's put some colors
+				if ($show == 'both') {
 
-				# Let's put some colors				
-				if (strpos($move, '-') !== false) {
-				    $printer .= "".chr(27)."[1;31m$stock_move_today". chr(27) . "[0m".""; // -
-				} else {
-						$printer .= "".chr(27)."[1;32m+$stock_move_today". chr(27) . "[0m".""; // +
+					$printer .= "".$company_name."";
+					$printer .= " ¡ ";
+					$printer .= "".$stock_price."";
+					$printer .= " ¡ ";
+
+					if (strpos($move, '-') !== false) {
+					    $printer .= "".chr(27)."[1;31m$stock_move_today". chr(27) . "[0m".""; //
+					} else {
+							$printer .= "".chr(27)."[1;32m+$stock_move_today". chr(27) . "[0m".""; // +
+					}
+
+					$printer .= "\n";
+
 				}
-				$printer .= "\n";
+
+				if ($show == 'up') {
+					if (strpos($move, '-') !== false) { } else {
+
+							$printer .= "".$company_name."";
+							$printer .= " ¡ ";
+							$printer .= "".$stock_price."";
+							$printer .= " ¡ ";
+							$printer .= "".chr(27)."[1;32m+$stock_move_today". chr(27) . "[0m".""; // +
+							$printer .= "\n";
+					}
+				}
+
+				if ($show == 'down') {
+
+					if (strpos($move, '-') !== false) {
+
+							$printer .= "".$company_name."";
+							$printer .= " ¡ ";
+							$printer .= "".$stock_price."";
+							$printer .= " ¡ ";
+					    $printer .= "".chr(27)."[1;31m$stock_move_today". chr(27) . "[0m"."";
+							$printer .= "\n";
+
+					} else {}
+
+				}
 
 	endforeach;
 
