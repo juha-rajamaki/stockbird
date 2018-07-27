@@ -15,3 +15,16 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/XE/BMW'),
 
 ];
+
+$companies = [
+
+    array("wsjlink"  => 'https://quotes.wsj.com/INTC'),
+    array("wsjlink"  => 'https://quotes.wsj.com/SPOT'),
+    array("wsjlink"  => 'https://quotes.wsj.com/AMD'),
+    array("wsjlink"  => 'https://quotes.wsj.com/AAPL'),
+    array("wsjlink"  => 'https://quotes.wsj.com/EBAY'),
+    array("wsjlink"  => 'https://quotes.wsj.com/NVDA'),
+    array("wsjlink"  => 'https://quotes.wsj.com/SBUX'),
+    array("wsjlink"  => 'https://quotes.wsj.com/TSLA'),
+
+];

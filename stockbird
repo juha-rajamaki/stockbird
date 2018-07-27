@@ -78,6 +78,6 @@ $show = $argv[1]; // up, down or both
 
 		endforeach;
 
-	echo "\n\n";
+	echo "\n";
 
 #	print_r($collector);
