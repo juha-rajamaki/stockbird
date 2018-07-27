@@ -23,87 +23,61 @@ $show = $argv[1]; // up, down or both
 		require_once("track.list");
 		asort($companies);
 
-echo "Collecting data ...\n\n";
-$printer = "";
+# 	Create Printer and Collector
+		echo "Collecting data ...\n\n";
+		$printer = '';
+		$collector = array();
 
-	foreach($companies as $company):
+		foreach($companies as $company):
 
-		#		Getters
+			#		Reset printer
+					$printer = '';
 
-				$url = $company['wsjlink'];
+			#		Getters
+					$url = $company['wsjlink'];
 
-		# 	Let's get the data
-				$curl = curl_init();
-				curl_setopt($curl, CURLOPT_URL, $url);
-				curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-				curl_setopt($curl, CURLOPT_HEADER, false);
-				$data = curl_exec($curl);
+			# 	Let's get the data
 
-		# 	Clean up the white spaces from data for better matching
-				$data = str_replace(" ", "", $data);
+					$curl = curl_init();
+					curl_setopt($curl, CURLOPT_URL, $url);
+					curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+					curl_setopt($curl, CURLOPT_HEADER, false);
+					$data = curl_exec($curl);
 
-				#		Stock price
-				preg_match_all('#quote_val[^>]*>(.*?)</span>#s', $data, $datamatch);
-				$stock_price = $datamatch[1][0];
+			# 	Clean up the white spaces from data for better matching
 
-				#		Company name
-				preg_match_all('#companyName[^>]*>(.*?)</span>#s', $data, $datamatch);
-				$company_name = $datamatch[1][0];
+					$data = str_replace(" ", "", $data);
 
-				#		Stock move today
-				preg_match_all('#quote_changePer[^>]*>(.*?)</span>#s', $data, $datamatch);
-				$stock_move_today = $datamatch[1][0];
-				$move = floatval($stock_move_today);
+					#		Stock price
+					preg_match_all('#quote_val[^>]*>(.*?)</span>#s', $data, $datamatch);
+					$stock_price = $datamatch[1][0];
 
-		#		Visualize
+					#		Company name
+					preg_match_all('#companyName[^>]*>(.*?)</span>#s', $data, $datamatch);
+					$company_name = $datamatch[1][0];
 
-				# Let's put some colors
-				if ($show == 'both') {
+					#		Stock move today
+					preg_match_all('#quote_changePer[^>]*>(.*?)</span>#s', $data, $datamatch);
+					$stock_move_today = floatval($datamatch[1][0]);
 
-					$printer .= "".$company_name."";
-					$printer .= " ¡ ";
-					$printer .= "".$stock_price."";
-					$printer .= " ¡ ";
+			#		Visualize
 
-					if (strpos($move, '-') !== false) {
-					    $printer .= "".chr(27)."[1;31m$stock_move_today". chr(27) . "[0m".""; //
+					$printer .= "".$company_name." | ";
+					$printer .= "".$stock_price." | ";
+
+					if (strpos($stock_move_today, '-') !== false) {
+					    $printer .= "".chr(27)."[1;31m$stock_move_today%". chr(27) . "[0m".""; // sotck going down
 					} else {
-							$printer .= "".chr(27)."[1;32m+$stock_move_today". chr(27) . "[0m".""; // +
+							$printer .= "".chr(27)."[1;32m+$stock_move_today%". chr(27) . "[0m".""; // stock going up
 					}
 
 					$printer .= "\n";
+					echo $printer;
 
-				}
+	#				$collector = array("$company_name" => "$printer");
 
-				if ($show == 'up') {
-					if (strpos($move, '-') !== false) { } else {
+		endforeach;
 
-							$printer .= "".$company_name."";
-							$printer .= " ¡ ";
-							$printer .= "".$stock_price."";
-							$printer .= " ¡ ";
-							$printer .= "".chr(27)."[1;32m+$stock_move_today". chr(27) . "[0m".""; // +
-							$printer .= "\n";
-					}
-				}
+	echo "\n\n";
 
-				if ($show == 'down') {
-
-					if (strpos($move, '-') !== false) {
-
-							$printer .= "".$company_name."";
-							$printer .= " ¡ ";
-							$printer .= "".$stock_price."";
-							$printer .= " ¡ ";
-					    $printer .= "".chr(27)."[1;31m$stock_move_today". chr(27) . "[0m"."";
-							$printer .= "\n";
-
-					} else {}
-
-				}
-
-	endforeach;
-
-echo $printer;
-
-echo "\n";
+#	print_r($collector);
