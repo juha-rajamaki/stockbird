@@ -35,6 +35,7 @@ $show = $argv[1]; // up, down or both
 
 			#		Getters
 					$url = $company['wsjlink'];
+					$simply_price = $company['simplyprice'];
 
 			# 	Let's get the data
 
@@ -65,11 +66,21 @@ $show = $argv[1]; // up, down or both
 					$printer .= "".$company_name." | ";
 					$printer .= "".$stock_price." | ";
 
-					if (strpos($stock_move_today, '-') !== false) {
-					    $printer .= "".chr(27)."[1;31m$stock_move_today%". chr(27) . "[0m".""; // sotck going down
+					# Simply Wall street price
+					if ($stock_price > $simply_price) {
+						$printer .= "".chr(27)."[1;30m$simply_price". chr(27) . "[0m"." | ";
 					} else {
-							$printer .= "".chr(27)."[1;32m+$stock_move_today%". chr(27) . "[0m".""; // stock going up
+						$printer .= "".chr(27)."[1;37m$simply_price". chr(27) . "[0m"." | ";
 					}
+
+					# Move today
+					if (strpos($stock_move_today, '-') !== false) {
+					    $printer .= "".chr(27)."[1;31m$stock_move_today%". chr(27) . "[0m"." | "; // sotck going down
+					} else {
+							$printer .= "".chr(27)."[1;32m+$stock_move_today%". chr(27) . "[0m"." | "; // stock going up
+					}
+
+					$printer .= "".$url."";
 
 					$printer .= "\n";
 					echo $printer;
