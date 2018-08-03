@@ -9,6 +9,11 @@
 
 $show = $argv[1]; // up, down or both
 
+$app 				= 'app/';
+
+			require_once("".$app."bird.ascii");
+			print_r($bird);
+
 # 	Presets
 
 		$dir    		= 'companies';
@@ -65,12 +70,13 @@ $show = $argv[1]; // up, down or both
 
 					$printer .= "".$company_name." | ";
 					$printer .= "".$stock_price." | ";
+					$potential =  round(($simply_price-$stock_price) / $stock_price * 100, 2);
 
 					# Simply Wall street price
 					if ($stock_price > $simply_price) {
-						$printer .= "".chr(27)."[1;30m$simply_price". chr(27) . "[0m"." | ";
+						$printer .= "".chr(27)."[1;30m$simply_price ($potential%)". chr(27) . "[0m"." | ";
 					} else {
-						$printer .= "".chr(27)."[1;37m$simply_price". chr(27) . "[0m"." | ";
+						$printer .= "".chr(27)."[1;37m$simply_price ($potential%)". chr(27) . "[0m"." | ";
 					}
 
 					# Move today
@@ -85,10 +91,15 @@ $show = $argv[1]; // up, down or both
 					$printer .= "\n";
 					echo $printer;
 
-	#				$collector = array("$company_name" => "$printer");
+					$collector[$potential] = "$printer";
 
 		endforeach;
+		echo "\n\n";
 
-	echo "\n";
+	# Check the collector content and reorder it
+	krsort($collector);
+	foreach($collector as $collected):
 
-#	print_r($collector);
+		print_r($collected);
+
+	endforeach;
