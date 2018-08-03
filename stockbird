@@ -16,9 +16,6 @@ $app 				= 'app/';
 
 # 	Presets
 
-		$dir    		= 'companies';
-		$url = "http://quotes.wsj.com/FI/CONSTI";
-
 		ini_set('display_errors', 0);
 		error_reporting(E_NOTICE);
 		ini_alter('date.timezone','Europe/Helsinki');
@@ -94,12 +91,20 @@ $app 				= 'app/';
 					$collector[$potential] = "$printer";
 
 		endforeach;
-		echo "\n\n";
+    system('clear');
 
 	# Check the collector content and reorder it
 	krsort($collector);
+	echo "Most potential now:\n\n";
 	foreach($collector as $collected):
-
 		print_r($collected);
-
 	endforeach;
+	echo "\n";
+/*
+	# Timeout
+	for ($x = 1; $x <= 30; $x++) {
+        	sleep (1);
+        	echo ".";
+	}
+*/
+  // system('clear');

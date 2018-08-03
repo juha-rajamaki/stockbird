@@ -5,13 +5,13 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/FI/DNA', "simplyprice"  => '13.23'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/YIT', "simplyprice"  => '6.37'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/CONSTI', "simplyprice"  => '16.22'),
-/*    array("wsjlink"  => 'https://quotes.wsj.com/FI/NDA1V', "simplyprice"  => '7.95'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/NDA1V', "simplyprice"  => '7.95'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/LEHTO', "simplyprice"  => '13.03'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/OKDAV', "simplyprice"  => '3.11'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/OKDBV', "simplyprice"  => '3.07'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/ORNAV', "simplyprice"  => '30.05'),
     array("wsjlink"  => 'https://quotes.wsj.com/XE/PAH3', "simplyprice"  => '47.25'),
-    array("wsjlink"  => 'https://quotes.wsj.com/XE/BMW', "simplyprice"  => '52.83'),*/
+    array("wsjlink"  => 'https://quotes.wsj.com/XE/BMW', "simplyprice"  => '52.83'),
 
 ];
 /*
