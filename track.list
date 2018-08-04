@@ -1,7 +1,7 @@
 <?php
 
 $companies = [
-/*
+
     array("wsjlink"  => 'https://quotes.wsj.com/FI/DNA', "simplyprice"  => '13.23'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/YIT', "simplyprice"  => '6.37'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/CONSTI', "simplyprice"  => '16.22'),
@@ -12,11 +12,6 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/FI/ORNAV', "simplyprice"  => '30.05'),
     array("wsjlink"  => 'https://quotes.wsj.com/XE/PAH3', "simplyprice"  => '47.25'),
     array("wsjlink"  => 'https://quotes.wsj.com/XE/BMW', "simplyprice"  => '52.83'),
-*/
-];
-
-$companies = [
-
     array("wsjlink"  => 'https://quotes.wsj.com/INTC', "simplyprice"  => '45.19'),
     array("wsjlink"  => 'https://quotes.wsj.com/SPOT', "simplyprice"  => '79'),
     array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplyprice"  => '10.02'),

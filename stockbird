@@ -65,6 +65,7 @@ $app 				= 'app/';
 
 			#		Visualize
 
+					echo (str_repeat(' ', (35-strlen($company_name))));
 					$printer .= "".$company_name." | ";
 					$printer .= "".$stock_price." | ";
 					$potential =  round(($simply_price-$stock_price) / $stock_price * 100, 2);
@@ -93,13 +94,14 @@ $app 				= 'app/';
 		endforeach;
     system('clear');
 
-	# Check the collector content and reorder it
-	krsort($collector);
-	echo "Most potential now:\n\n";
-	foreach($collector as $collected):
-		print_r($collected);
-	endforeach;
-	echo "\n";
+			# Check the collector content and reorder it
+
+					krsort($collector);
+					echo "Most potential now:\n\n";
+					foreach($collector as $collected):
+						print_r($collected);
+					endforeach;
+					echo "\n";
 /*
 	# Timeout
 	for ($x = 1; $x <= 30; $x++) {
