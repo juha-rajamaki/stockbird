@@ -12,13 +12,5 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/FI/ORNAV', "simplyprice"  => '30.05'),
     array("wsjlink"  => 'https://quotes.wsj.com/XE/PAH3', "simplyprice"  => '47.25'),
     array("wsjlink"  => 'https://quotes.wsj.com/XE/BMW', "simplyprice"  => '52.83'),
-    array("wsjlink"  => 'https://quotes.wsj.com/INTC', "simplyprice"  => '45.19'),
-    array("wsjlink"  => 'https://quotes.wsj.com/SPOT', "simplyprice"  => '79'),
-    array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplyprice"  => '10.02'),
-    array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplyprice"  => '181'),
-    array("wsjlink"  => 'https://quotes.wsj.com/EBAY', "simplyprice"  => '28.05'),
-    array("wsjlink"  => 'https://quotes.wsj.com/NVDA', "simplyprice"  => '208'),
-    array("wsjlink"  => 'https://quotes.wsj.com/SBUX', "simplyprice"  => '43.20'),
-    array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplyprice"  => '421'),
 
 ];

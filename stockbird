@@ -7,12 +7,11 @@
 
 */
 
-$show = $argv[1]; // up, down or both
+$list 		= $argv[1];
+$app			= 'app/';
 
-$app 				= 'app/';
-
-			require_once("".$app."bird.ascii");
-			print_r($bird);
+		require_once("".$app."bird.ascii");
+		print_r($bird);
 
 # 	Presets
 
@@ -21,8 +20,8 @@ $app 				= 'app/';
 		ini_alter('date.timezone','Europe/Helsinki');
 
 #		List of companies to track
+		require_once("list/$list");
 
-		require_once("track.list");
 		asort($companies);
 
 # 	Create Printer and Collector
@@ -65,7 +64,7 @@ $app 				= 'app/';
 
 			#		Visualize
 
-					echo (str_repeat(' ', (35-strlen($company_name))));
+					$company_name .= str_repeat(' ', (25-strlen($company_name)));
 					$printer .= "".$company_name." | ";
 					$printer .= "".$stock_price." | ";
 					$potential =  round(($simply_price-$stock_price) / $stock_price * 100, 2);
