@@ -2,15 +2,19 @@
 
 $companies = [
 
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/DNA', "simplyprice"  => '13.23'),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/YIT', "simplyprice"  => '6.37'),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/CONSTI', "simplyprice"  => '16.22'),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/NDA1V', "simplyprice"  => '7.95'),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/LEHTO', "simplyprice"  => '13.03'),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/OKDAV', "simplyprice"  => '3.11'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/DNA', "simplyprice"  => '18.15'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/FIA1S', "simplyprice"  => '13.77'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/FORTUM/', "simplyprice"  => '19.48'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/KNEBV', "simplyprice"  => '30.36'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/LAT1V', "simplyprice"  => '19.44'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/NOKIA', "simplyprice"  => '6.66'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/XHEL/NDAFI', "simplyprice"  => '8.70'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/OKDAV', "simplyprice"  => '3.00'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/OKDBV', "simplyprice"  => '3.07'),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/ORNAV', "simplyprice"  => '30.05'),
-    array("wsjlink"  => 'https://quotes.wsj.com/XE/PAH3', "simplyprice"  => '47.25'),
-    array("wsjlink"  => 'https://quotes.wsj.com/XE/BMW', "simplyprice"  => '52.83'),
+    array("wsjlink"  => 'https://quotes.wsj.com/XE/PAH3', "simplyprice"  => '59.94'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/SAMPO', "simplyprice"  => '40.41'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FR/SOI', "simplyprice"  => '60.94'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/TELIA1', "simplyprice"  => '3.44'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/YIT', "simplyprice"  => '9.12'),
 
 ];
