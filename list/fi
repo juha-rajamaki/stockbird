@@ -17,4 +17,8 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/FI/TELIA1', "simplyprice"  => '3.44'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/YIT', "simplyprice"  => '9.12'),
 
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/WRT1V', "simplyprice"  => ''),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/AKTIA', "simplyprice"  => ''),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/LEHTO', "simplyprice"  => ''),
+
 ];
