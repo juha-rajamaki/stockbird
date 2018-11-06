@@ -4,11 +4,11 @@ $companies = [
 
     array("wsjlink"  => 'https://quotes.wsj.com/FI/DNA', "simplyprice"  => '18.15'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/FIA1S', "simplyprice"  => '13.77'),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/FORTUM/', "simplyprice"  => '19.48'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/FORTUM', "simplyprice"  => '19.48'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/KNEBV', "simplyprice"  => '30.36'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/LAT1V', "simplyprice"  => '19.44'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/NOKIA', "simplyprice"  => '6.66'),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/XHEL/NDAFI', "simplyprice"  => '8.70'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/NDAFI', "simplyprice"  => '8.70'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/OKDAV', "simplyprice"  => '3.00'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/OKDBV', "simplyprice"  => '3.07'),
     array("wsjlink"  => 'https://quotes.wsj.com/XE/PAH3', "simplyprice"  => '59.94'),
@@ -16,9 +16,8 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/FR/SOI', "simplyprice"  => '60.94'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/TELIA1', "simplyprice"  => '3.44'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/YIT', "simplyprice"  => '9.12'),
-
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/WRT1V', "simplyprice"  => ''),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/AKTIA', "simplyprice"  => ''),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/LEHTO', "simplyprice"  => ''),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/WRT1V', "simplyprice"  => '0'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/AKTIA', "simplyprice"  => '0'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/LEHTO', "simplyprice"  => '0'),
 
 ];

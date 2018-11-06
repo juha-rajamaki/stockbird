@@ -8,7 +8,7 @@
 */
 
 $list 		= $argv[1];
-$app			= 'app/';
+$app		= 'app/';
 
 		require_once("".$app."bird.ascii");
 		print_r($bird);
@@ -78,9 +78,9 @@ $app			= 'app/';
 
 					# Move today
 					if (strpos($stock_move_today, '-') !== false) {
-					    $printer .= "".chr(27)."[1;31m$stock_move_today%". chr(27) . "[0m"." | "; // sotck going down
+						$printer .= "".chr(27)."[1;31m$stock_move_today%". chr(27) . "[0m"." | "; // sotck going down
 					} else {
-							$printer .= "".chr(27)."[1;32m+$stock_move_today%". chr(27) . "[0m"." | "; // stock going up
+						$printer .= "".chr(27)."[1;32m+$stock_move_today%". chr(27) . "[0m"." | "; // stock going up
 					}
 
 					$printer .= "".$url."";
