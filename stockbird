@@ -80,7 +80,7 @@ $app		= 'app/';
 
 					# Move today
 					if (strpos($stock_move_today, '-') !== false) {
-						$printer .= "".chr(27)."[1;31m$stock_move_today%". chr(27) . "[0m"." | "; // sotck going down
+						$printer .= "".chr(27)."[1;31m$stock_move_today%". chr(27) . "[0m"." | "; // stock going down
 					} else {
 						$printer .= "".chr(27)."[1;32m+$stock_move_today%". chr(27) . "[0m"." | "; // stock going up
 					}
@@ -112,3 +112,11 @@ $app		= 'app/';
 						print_r($collected);
 					endforeach;
 					echo "\n";
+/*
+	# Timeout
+	for ($x = 1; $x <= 30; $x++) {
+        	sleep (1);
+        	echo ".";
+	}
+*/
+  // system('clear');
