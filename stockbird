@@ -28,6 +28,7 @@ $app		= 'app/';
 		echo "Collecting data ...\n\n";
 		$printer = '';
 		$collector = array();
+		$countline = 0;
 
 		foreach($companies as $company):
 
@@ -67,7 +68,8 @@ $app		= 'app/';
 					$company_name .= str_repeat(' ', (25-strlen($company_name)));
 					$printer .= "".$company_name." | ";
 					$printer .= "".$stock_price." | ";
-					$potential =  round(($simply_price-$stock_price) / $stock_price * 100, 2);
+					$potential = round(($simply_price-$stock_price) / $stock_price * 100, 2);
+					$potential_order = "".$potential."";
 
 					# Simply Wall street price
 					if ($stock_price > $simply_price) {
@@ -83,29 +85,30 @@ $app		= 'app/';
 						$printer .= "".chr(27)."[1;32m+$stock_move_today%". chr(27) . "[0m"." | "; // stock going up
 					}
 
+					# Printout
 					$printer .= "".$url."";
+					echo "".$printer."\n";
 
-					$printer .= "\n";
-					echo $printer;
+					# Create data array
+					$collector[$countline] = array(
+							"id" => "$countline",
+							"potential" => "$potential_order",
+							"data" => "$printer",
+					);
 
-					$collector[$potential] = "$printer";
+					$countline = $countline+1;
 
-		endforeach;
+			endforeach;
+
     system('clear');
 
 			# Check the collector content and reorder it
+				echo "Most potential now:\n\n";
 
-					krsort($collector);
-					echo "Most potential now:\n\n";
+########## THIS DOES NOT WORK ####################
+				ksort($collector[potential]);
+
 					foreach($collector as $collected):
 						print_r($collected);
 					endforeach;
 					echo "\n";
-/*
-	# Timeout
-	for ($x = 1; $x <= 30; $x++) {
-        	sleep (1);
-        	echo ".";
-	}
-*/
-  // system('clear');
