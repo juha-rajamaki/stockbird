@@ -7,9 +7,10 @@
 
 */
 
-$list 		= $argv[1];
+$list 	= $argv[1];
 $app		= 'app/';
 
+//		require_once("".$app."functions.php");
 		require_once("".$app."bird.ascii");
 		print_r($bird);
 
@@ -48,6 +49,13 @@ $app		= 'app/';
 					$data = curl_exec($curl);
 
 			# 	Clean up the white spaces from data for better matching
+
+//					$visualizer = new visualizer;
+//					var_dump(visualizer);
+//					die('sdkhsdfk');
+//				$retval = $data::visualize($data);
+//				$data = $this->visualize($data);
+// 				$this->visualizer($data);
 
 					$data = str_replace(" ", "", $data);
 
@@ -90,7 +98,7 @@ $app		= 'app/';
 					echo "".$printer."\n";
 
 					# Create data array
-					$collector[$countline] = array(
+					$collector[$potential_order] = array(
 							"id" => "$countline",
 							"potential" => "$potential_order",
 							"data" => "$printer",
@@ -100,23 +108,16 @@ $app		= 'app/';
 
 			endforeach;
 
-    system('clear');
+    	system('clear');
+			krsort($collector);
 
 			# Check the collector content and reorder it
 				echo "Most potential now:\n\n";
 
-########## THIS DOES NOT WORK ####################
-				ksort($collector[potential]);
-
 					foreach($collector as $collected):
-						print_r($collected);
+
+						print_r($collected['data']);
+						echo "\n";
+
 					endforeach;
 					echo "\n";
-/*
-	# Timeout
-	for ($x = 1; $x <= 30; $x++) {
-        	sleep (1);
-        	echo ".";
-	}
-*/
-  // system('clear');

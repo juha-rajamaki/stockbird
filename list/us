@@ -8,8 +8,8 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/SPOT', "simplyprice"  => '131'),
     array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplyprice"  => '320'),
     array("wsjlink"  => 'https://quotes.wsj.com/V', "simplyprice"  => '90'),
-
-#    array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplyprice"  => '10.02'),
-#    array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplyprice"  => '181'),
+    array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplyprice"  => '10.02'),
+    array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplyprice"  => '181'),
+    array("wsjlink"  => 'https://quotes.wsj.com/MU', "simplyprice"  => '84.57'),
 
 ];
