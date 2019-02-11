@@ -2,14 +2,15 @@
 
 $companies = [
 
-    array("wsjlink"  => 'https://quotes.wsj.com/INTC', "simplyprice"  => '41.60'),
-    array("wsjlink"  => 'https://quotes.wsj.com/MA', "simplyprice"  => '147'),
-    array("wsjlink"  => 'https://quotes.wsj.com/NVDA', "simplyprice"  => '127'),
-    array("wsjlink"  => 'https://quotes.wsj.com/SPOT', "simplyprice"  => '131'),
-    array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplyprice"  => '320'),
-    array("wsjlink"  => 'https://quotes.wsj.com/V', "simplyprice"  => '90'),
-    array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplyprice"  => '10.02'),
-    array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplyprice"  => '181'),
-    array("wsjlink"  => 'https://quotes.wsj.com/MU', "simplyprice"  => '84.57'),
+    array("wsjlink"  => 'https://quotes.wsj.com/INTC', "simplyprice"  => '48.04'),
+    array("wsjlink"  => 'https://quotes.wsj.com/MA', "simplyprice"  => '138'),
+    array("wsjlink"  => 'https://quotes.wsj.com/NVDA', "simplyprice"  => '106'),
+    array("wsjlink"  => 'https://quotes.wsj.com/SPOT', "simplyprice"  => '98'),
+    array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplyprice"  => '262'),
+    array("wsjlink"  => 'https://quotes.wsj.com/V', "simplyprice"  => '91'),
+    array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplyprice"  => '15.30'),
+    array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplyprice"  => '153'),
+    array("wsjlink"  => 'https://quotes.wsj.com/MU', "simplyprice"  => '85.34'),
+    array("wsjlink"  => 'https://quotes.wsj.com/QCOM', "simplyprice"  => '34.30'),
 
 ];
