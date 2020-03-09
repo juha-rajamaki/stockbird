@@ -2,17 +2,17 @@
 
 $companies = [
 
-    array("wsjlink"  => 'https://quotes.wsj.com/INTC', "simplyprice"  => '47.85'),
-    array("wsjlink"  => 'https://quotes.wsj.com/MA', "simplyprice"  => '319.86'),
-    array("wsjlink"  => 'https://quotes.wsj.com/NVDA', "simplyprice"  => '93.66'),
-    array("wsjlink"  => 'https://quotes.wsj.com/SPOT', "simplyprice"  => '144.83'),
-    array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplyprice"  => '944.63'),
-    array("wsjlink"  => 'https://quotes.wsj.com/V', "simplyprice"  => '191.48'),
-    array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplyprice"  => '36.39'),
-    array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplyprice"  => '273.09'),
-    array("wsjlink"  => 'https://quotes.wsj.com/MU', "simplyprice"  => '92.73'),
-    array("wsjlink"  => 'https://quotes.wsj.com/QCOM', "simplyprice"  => '61.66'),
-    array("wsjlink"  => 'https://quotes.wsj.com/O', "simplyprice"  => '108.03'),
-    array("wsjlink"  => 'https://quotes.wsj.com/PYPL', "simplyprice"  => '120.19'),
+    array("wsjlink"  => 'https://quotes.wsj.com/INTC', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-intc/intel'),
+    array("wsjlink"  => 'https://quotes.wsj.com/MA', "simplylink"  => 'https://simplywall.st/stocks/us/software/nyse-ma/mastercard'),
+    array("wsjlink"  => 'https://quotes.wsj.com/NVDA', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-nvda/nvidia'),
+    array("wsjlink"  => 'https://quotes.wsj.com/SPOT', "simplylink"  => 'https://simplywall.st/stocks/us/media/nyse-spot/spotify-technology'),
+    array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplylink"  => 'https://simplywall.st/stocks/us/automobiles/nasdaq-tsla/tesla'),
+    array("wsjlink"  => 'https://quotes.wsj.com/V', "simplylink"  => 'https://simplywall.st/stocks/us/software/nyse-v/visa'),
+    array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-amd/advanced-micro-devices'),
+    array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplylink"  => 'https://simplywall.st/stocks/us/tech/nasdaq-aapl/apple'),
+    array("wsjlink"  => 'https://quotes.wsj.com/MU', "simplylink"  => 'https://simplywall.st/stocks/at/semiconductors/vie-mu/micron-technology-shares'),
+    array("wsjlink"  => 'https://quotes.wsj.com/QCOM', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-qcom/qualcomm'),
+    array("wsjlink"  => 'https://quotes.wsj.com/O', "simplylink"  => 'https://simplywall.st/stocks/us/real-estate/nyse-o/realty-income'),
+    array("wsjlink"  => 'https://quotes.wsj.com/PYPL', "simplylink"  => 'https://simplywall.st/stocks/us/software/nasdaq-pypl/paypal-holdings'),
 
 ];

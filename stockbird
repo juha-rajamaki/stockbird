@@ -10,7 +10,6 @@
 $list 	= $argv[1];
 $app		= 'app/';
 
-//		require_once("".$app."functions.php");
 		require_once("".$app."bird.ascii");
 		print_r($bird);
 
@@ -33,12 +32,13 @@ $app		= 'app/';
 
 		foreach($companies as $company):
 
+		### 		Start crawling wall street journal
+
 			#		Reset printer
 					$printer = '';
 
 			#		Getters
 					$url = $company['wsjlink'];
-					$simply_price = $company['simplyprice'];
 
 			# 	Let's get the data
 
@@ -47,23 +47,19 @@ $app		= 'app/';
 					curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 					curl_setopt($curl, CURLOPT_HEADER, false);
 
-			# Mimic a browser
+			# Mimic a browser because they are trying to block crawlers just like this
 
 					curl_setopt($curl, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.52 Safari/537.17');
 			    curl_setopt($curl, CURLOPT_AUTOREFERER, true);
 			    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 			    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
-			 //   curl_setopt($curl, CURLOPT_VERBOSE, 1);
+					// curl_setopt($curl, CURLOPT_VERBOSE, 1);
 
-			# Skip SSL-v erifications
+			# Skip SSL-verification
 					curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
 					curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
 
 					$data = curl_exec($curl);
-
-// print_r($data);
-// die('x');
-
 
 			# 	Clean up the white spaces from data for better matching
 
@@ -80,6 +76,61 @@ $app		= 'app/';
 					#		Stock move today
 					preg_match_all('#quote_changePer[^>]*>(.*?)</span>#s', $data, $datamatch);
 					$stock_move_today = floatval($datamatch[1][0]);
+
+		### 		Start crawling Simply wall street
+
+			#		Getters
+							$wsjurl 				= $company['wsjlink'];
+							$url 						= $company['simplylink'];
+
+					# 	Let's get the data
+
+							$curl = curl_init();
+							curl_setopt($curl, CURLOPT_URL, $url);
+							curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+							curl_setopt($curl, CURLOPT_HEADER, false);
+
+					# Mimic a browser because they are trying to block crawlers just like this
+
+							curl_setopt($curl, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.52 Safari/537.17');
+					    curl_setopt($curl, CURLOPT_AUTOREFERER, true);
+					    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+					    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
+							// curl_setopt($curl, CURLOPT_VERBOSE, 1);
+
+					# Skip SSL-verifications
+							curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+							curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+
+							$data = curl_exec($curl);
+
+					# 	Clean up the white spaces from data for better matching
+
+							$data = str_replace(" ", "", $data);
+
+							#		Fair value
+							preg_match_all('#fair[^>]*>(.*?)</#s', $data, $datamatch);
+							$result = $datamatch[1][2];	// default
+
+//							print_r($datamatch[1]);
+
+							if(strpos($datamatch[1][2], "(") !== false){
+									$result = $datamatch[1][2];
+							} else {
+									$result = $datamatch[1][5];
+							}
+
+//							print_r($result);
+
+							# Let's clean the data
+							$result = str_replace(")", "", $result);
+							$result = str_replace("(", "", $result);
+							$result = str_replace("$", "", $result);
+							$result = str_replace("€", "", $result);
+
+							$simply_price = $result;
+
+//							echo "$company_name: ".$simply_price."\n";
 
 			#		Visualize
 
@@ -104,7 +155,7 @@ $app		= 'app/';
 					}
 
 					# Printout
-					$printer .= "".$url."";
+					$printer .= "".$wsjurl."";
 					echo "".$printer."\n";
 
 					# Create data array
