@@ -112,7 +112,7 @@ $app		= 'app/';
 							preg_match_all('#fair[^>]*>(.*?)</#s', $data, $datamatch);
 							$result = $datamatch[1][2];	// default
 
-//							print_r($datamatch[1]);
+							// print_r($datamatch[1]);
 
 							if(strpos($datamatch[1][2], "(") !== false){
 									$result = $datamatch[1][2];
