@@ -16,7 +16,8 @@ $app		= 'app/';
 # 	Presets
 
 		ini_set('display_errors', 1);
-		error_reporting(E_NOTICE);
+		// error_reporting(E_NOTICE);
+		error_reporting(E_ALL & ~E_NOTICE);
 		ini_alter('date.timezone','Europe/Helsinki');
 
 #		List of companies to track
@@ -25,7 +26,7 @@ $app		= 'app/';
 		asort($companies);
 
 # 	Create Printer and Collector
-		echo "Collecting data ...\n\n";
+		echo "Collecting data ... Hold on this might take a while. \n\n";
 		$printer = '';
 		$collector = array();
 		$countline = 0;
@@ -112,15 +113,24 @@ $app		= 'app/';
 							preg_match_all('#fair[^>]*>(.*?)</#s', $data, $datamatch);
 							$result = $datamatch[1][2];	// default
 
-							// print_r($datamatch[1]);
-
-							if(strpos($datamatch[1][2], "(") !== false){
+							if(strpos($datamatch[1][2], "(") !== false) {
 									$result = $datamatch[1][2];
-							} else {
+							}
+							elseif(strpos($datamatch[1][4], "(") !== false) {
+									$result = $datamatch[1][4];
+							}
+							elseif(strpos($datamatch[1][5], "(") !== false) {
 									$result = $datamatch[1][5];
 							}
+							elseif(strpos($datamatch[1][7], "(") !== false) {
+									$result = $datamatch[1][7];
+							}
+							else { // collecting or fetching fails
+									$printer .= "".chr(27)."[1;31mFAIL ". chr(27) . "[0m"." | ";
+									$result = 0;
+							}
 
-//							print_r($result);
+//						print_r($result);
 
 							# Let's clean the data
 							$result = str_replace(")", "", $result);
