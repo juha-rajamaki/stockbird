@@ -15,5 +15,7 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/O', "simplylink"  => 'https://simplywall.st/stocks/us/real-estate/nyse-o/realty-income'),
     array("wsjlink"  => 'https://quotes.wsj.com/PYPL', "simplylink"  => 'https://simplywall.st/stocks/us/software/nasdaq-pypl/paypal-holdings'),
     array("wsjlink"  => 'https://quotes.wsj.com/NFLX', "simplylink"  => 'https://simplywall.st/stocks/us/media/nasdaq-nflx/netflix'),
+    array("wsjlink"  => 'https://quotes.wsj.com/DAL', "simplylink"  => 'https://simplywall.st/stocks/us/transportation/nyse-dal/delta-air-lines'),
+    array("wsjlink"  => 'https://quotes.wsj.com/LUV', "simplylink"  => 'https://simplywall.st/stocks/us/transportation/nyse-luv/southwest-airlines'),
 
 ];
