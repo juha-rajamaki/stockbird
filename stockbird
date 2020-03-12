@@ -68,7 +68,8 @@ $app		= 'app/';
 
 					#		Stock price
 					preg_match_all('#quote_val[^>]*>(.*?)</span>#s', $data, $datamatch);
-					$stock_price = $datamatch[1][0];
+					$stock_price = round($datamatch[1][0], 2);
+					// echo "".$stock_price."";
 
 					#		Company name
 					preg_match_all('#companyName[^>]*>(.*?)</span>#s', $data, $datamatch);
@@ -150,7 +151,8 @@ $app		= 'app/';
 
 					$company_name .= str_repeat(' ', (25-strlen($company_name)));
 					$printer .= "".$company_name." | ";
-					$stock_price .= str_repeat(' ', (6-strlen($stock_price)));
+					$stock_price = round($stock_price, 2);
+					// $stock_price .= str_repeat(' ', (6-strlen($stock_price)));
 					$printer .= "".$stock_price." | ";
 					$potential = round(($simply_price-$stock_price) / $stock_price * 100, 2);
 					$potential_order = "".$potential."";
@@ -200,5 +202,18 @@ $app		= 'app/';
 					endforeach;
 
 					echo "\n";
-					echo "Your list performance: ".round($yourindex/$countline, 2)."%";
+					$yourperformance = round($yourindex/$countline, 2);
+
+					// BULLish market
+					if ($yourperformance > 0 && $yourperformance <= 5) { echo "".chr(27)."[1;32mStocks are going up". chr(27) . "[0m"." | ";}
+					if ($yourperformance > 5 && $yourperformance <= 10) { echo "".chr(27)."[1;32mThere is opportunities.". chr(27) . "[0m"." | ";}
+					if ($yourperformance > 10) { echo "".chr(27)."[1;32mPeople are greedy!". chr(27) . "[0m"." | ";}
+
+					// BEARish market
+					if ($yourperformance < 0 && $yourperformance >= -5) { echo "".chr(27)."[1;31mStocks are going down". chr(27) . "[0m"." | ";}
+					if ($yourperformance < -5 && $yourperformance >= -10) { echo "".chr(27)."[1;31mThere is FEAR on the street". chr(27) . "[0m"." | ";}
+					if ($yourperformance < -10) { echo "".chr(27)."[1;31mThere is blood on the streets". chr(27) . "[0m"." | ";}
+
+					echo "Your list performance: $yourperformance%";
+
 					echo "\n";
