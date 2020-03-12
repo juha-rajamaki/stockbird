@@ -150,6 +150,7 @@ $app		= 'app/';
 
 					$company_name .= str_repeat(' ', (25-strlen($company_name)));
 					$printer .= "".$company_name." | ";
+					$stock_price .= str_repeat(' ', (6-strlen($stock_price)));
 					$printer .= "".$stock_price." | ";
 					$potential = round(($simply_price-$stock_price) / $stock_price * 100, 2);
 					$potential_order = "".$potential."";
@@ -167,6 +168,8 @@ $app		= 'app/';
 					} else {
 						$printer .= "".chr(27)."[1;32m+$stock_move_today%". chr(27) . "[0m"." | "; // stock going up
 					}
+
+					$yourindex = $stock_move_today + $yourindex;
 
 					# Printout
 					$printer .= "".$wsjurl."";
@@ -195,4 +198,7 @@ $app		= 'app/';
 						echo "\n";
 
 					endforeach;
+
+					echo "\n";
+					echo "Your list performance: ".round($yourindex/$countline, 2)."%";
 					echo "\n";
