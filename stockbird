@@ -205,18 +205,18 @@ $app		= 'app/';
 					$yourperformance = round($yourindex/$countline, 2);
 
 					// BULLish market
-					if ($yourperformance > 2 && $yourperformance <= 5) { echo "".chr(27)."[1;32mStocks are going up". chr(27) . "[0m"." | ";}
-					if ($yourperformance > 5 && $yourperformance <= 10) { echo "".chr(27)."[1;32mThere is opportunities.". chr(27) . "[0m"." | ";}
-					if ($yourperformance > 10) { echo "".chr(27)."[1;32mPeople got greedy!". chr(27) . "[0m"." | ";}
+					if ($yourperformance > 2 && $yourperformance <= 5) { echo "".chr(27)."[1;32mStocks are going up.". chr(27) . "[0m"." | ";}
+					if ($yourperformance > 5 && $yourperformance <= 10) { echo "".chr(27)."[1;32mThere might be some opporunities on the market.". chr(27) . "[0m"." | ";}
+					if ($yourperformance > 10) { echo "".chr(27)."[1;32mPeople got greedy. Hope you invested yesterday!". chr(27) . "[0m"." | ";}
 
 					// Business as usual
 					if ($yourperformance >= -2 && $yourperformance <= 2) { echo "".chr(27)."[1;34mBusiness as usual". chr(27) . "[0m"." | ";}
 
 					// BEARish market
-					if ($yourperformance < -2 && $yourperformance >= -5) { echo "".chr(27)."[1;31mStocks are going down". chr(27) . "[0m"." | ";}
-					if ($yourperformance < -5 && $yourperformance >= -10) { echo "".chr(27)."[1;31mThere is FEAR on the street". chr(27) . "[0m"." | ";}
-					if ($yourperformance < -10) { echo "".chr(27)."[1;31mThere is BLOOD on the streets". chr(27) . "[0m"." | ";}
+					if ($yourperformance < -2 && $yourperformance >= -5) { echo "".chr(27)."[1;31mStocks are going down.". chr(27) . "[0m"." | ";}
+					if ($yourperformance < -5 && $yourperformance >= -10) { echo "".chr(27)."[1;31mThere is FEAR on the street and market going down.". chr(27) . "[0m"." | ";}
+					if ($yourperformance < -10) { echo "".chr(27)."[1;31mThere is PANIC and major SELL-OFF on the market". chr(27) . "[0m"." | ";}
 
-					echo "Your list performance: $yourperformance%";
+					echo "Performance of your list: $yourperformance%";
 
-					echo "\n";
+					echo "\n\n";
