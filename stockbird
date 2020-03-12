@@ -122,12 +122,16 @@ $app		= 'app/';
 							elseif(strpos($datamatch[1][5], "(") !== false) {
 									$result = $datamatch[1][5];
 							}
+							elseif(strpos($datamatch[1][6], "(") !== false) {
+									$result = $datamatch[1][6];
+							}
 							elseif(strpos($datamatch[1][7], "(") !== false) {
 									$result = $datamatch[1][7];
 							}
 							else { // collecting or fetching fails
 									$printer .= "".chr(27)."[1;31mFAIL ". chr(27) . "[0m"." | ";
 									$result = 0;
+									print_r($datamatch[1]);
 							}
 
 //						print_r($result);
