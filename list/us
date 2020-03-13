@@ -18,5 +18,6 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/DAL', "simplylink"  => 'https://simplywall.st/stocks/us/transportation/nyse-dal/delta-air-lines'),
     array("wsjlink"  => 'https://quotes.wsj.com/LUV', "simplylink"  => 'https://simplywall.st/stocks/us/transportation/nyse-luv/southwest-airlines'),
     array("wsjlink"  => 'https://quotes.wsj.com/DIS', "simplylink"  => 'https://simplywall.st/stocks/us/media/nyse-dis/walt-disney'),
+    array("wsjlink"  => 'https://quotes.wsj.com/BA', "simplylink"  => 'https://simplywall.st/stocks/us/capital-goods/nyse-ba/boeing'),
 
 ];
