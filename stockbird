@@ -152,9 +152,11 @@ $app		= 'app/';
 					$company_name .= str_repeat(' ', (25-strlen($company_name)));
 					$printer .= "".$company_name." | ";
 					$stock_price = round($stock_price, 2);
-					// $stock_price .= str_repeat(' ', (6-strlen($stock_price)));
 					$printer .= "".$stock_price." | ";
-					$potential = round(($simply_price-$stock_price) / $stock_price * 100, 2);
+
+					if ($stock_price != 0) { $potential = round(($simply_price-$stock_price) / $stock_price * 100, 2);}
+					else { $stock_price = "-"; $potential = "-"; } // error in stock price
+
 					$potential_order = "".$potential."";
 
 					# Simply Wall street price

@@ -10,7 +10,7 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/XE/PAH3', "simplylink"  => 'https://simplywall.st/stocks/de/automobiles/etr-pah3/porsche-automobil-holding-shares'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/SAMPO', "simplylink"  => 'https://simplywall.st/stocks/fi/insurance/hel-sampo/sampo-oyj-shares'),
     array("wsjlink"  => 'https://quotes.wsj.com/FR/SOI', "simplylink"  => 'https://simplywall.st/stocks/fr/semiconductors/epa-soi/soitec-shares'),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/TELIA1', "simplylink"  => 'https://simplywall.st/stocks/fi/telecom/hel-telia1/telia-company-shares'),
+#    array("wsjlink"  => 'https://quotes.wsj.com/FI/TELIA1', "simplylink"  => 'https://simplywall.st/stocks/fi/telecom/hel-telia1/telia-company-shares'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/YIT', "simplylink"  => 'https://simplywall.st/stocks/fi/capital-goods/hel-yit/yit-oyj-shares'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/AKTIA', "simplylink"  => 'https://simplywall.st/stocks/fi/banks/hel-aktia/aktia-pankki-oyj-shares'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/NESTE', "simplylink"  => 'https://simplywall.st/stocks/fi/energy/hel-neste/neste-oyj-shares'),
