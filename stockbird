@@ -130,7 +130,6 @@ $app		= 'app/';
 									$result = $datamatch[1][7];
 							}
 							else { // collecting or fetching fails
-									$printer .= "".chr(27)."[1;31mFAIL ". chr(27) . "[0m"." | ";
 									$result = 0;
 									print_r($datamatch[1]);
 							}
@@ -144,7 +143,7 @@ $app		= 'app/';
 							$result = str_replace("€", "", $result);
 
 							$simply_price = $result;
-
+							if ($simply_price == 0) {$simply_price = "---"; } // error in simply stock price
 //							echo "$company_name: ".$simply_price."\n";
 
 			#		Visualize
@@ -152,11 +151,11 @@ $app		= 'app/';
 					$company_name .= str_repeat(' ', (25-strlen($company_name)));
 					$printer .= "".$company_name." | ";
 					$stock_price = round($stock_price, 2);
-					$printer .= "".$stock_price." | ";
 
 					if ($stock_price != 0) { $potential = round(($simply_price-$stock_price) / $stock_price * 100, 2);}
-					else { $stock_price = "-"; $potential = "-"; } // error in stock price
+					else { $stock_price = "---"; $potential = "---"; } // error in wall street stock price
 
+					$printer .= "".$stock_price." | ";
 					$potential_order = "".$potential."";
 
 					# Simply Wall street price
