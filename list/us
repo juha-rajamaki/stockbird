@@ -12,7 +12,7 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplylink"  => 'https://simplywall.st/stocks/us/tech/nasdaq-aapl/apple'),
     array("wsjlink"  => 'https://quotes.wsj.com/MU', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-mu/micron-technology'),
     array("wsjlink"  => 'https://quotes.wsj.com/QCOM', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-qcom/qualcomm'),
-    array("wsjlink"  => 'https://quotes.wsj.com/O', "simplylink"  => 'https://simplywall.st/stocks/us/real-estate/nyse-o/realty-income'),
+//    array("wsjlink"  => 'https://quotes.wsj.com/O', "simplylink"  => 'https://simplywall.st/stocks/us/real-estate/nyse-o/realty-income'),
     array("wsjlink"  => 'https://quotes.wsj.com/PYPL', "simplylink"  => 'https://simplywall.st/stocks/us/software/nasdaq-pypl/paypal-holdings'),
     array("wsjlink"  => 'https://quotes.wsj.com/NFLX', "simplylink"  => 'https://simplywall.st/stocks/us/media/nasdaq-nflx/netflix'),
     array("wsjlink"  => 'https://quotes.wsj.com/DAL', "simplylink"  => 'https://simplywall.st/stocks/us/transportation/nyse-dal/delta-air-lines'),
