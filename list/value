@@ -1,8 +1,0 @@
-<?php
-
-$companies = [
-
-    array("wsjlink"  => 'https://quotes.wsj.com/O', "simplylink"  => 'https://simplywall.st/stocks/us/real-estate/nyse-o/realty-income'),
-    array("wsjlink"  => 'https://quotes.wsj.com/mmm', "simplylink"  => 'https://simplywall.st/stocks/us/capital-goods/nyse-mmm/3m'),
-
-];

@@ -1,0 +1,18 @@
+<?php
+
+$companies = [
+
+    array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-amd/advanced-micro-devices'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/FORTUM', "simplylink"  => 'https://simplywall.st/stocks/fi/utilities/hel-fortum/fortum-oyj-shares'),
+    array("wsjlink"  => 'https://quotes.wsj.com/INTC', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-intc/intel'),
+    array("wsjlink"  => 'https://quotes.wsj.com/MU', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-mu/micron-technology'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/NESTE', "simplylink"  => 'https://simplywall.st/stocks/fi/energy/hel-neste/neste-oyj-shares'),
+    array("wsjlink"  => 'https://quotes.wsj.com/NVDA', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-nvda/nvidia'),
+    array("wsjlink"  => 'https://quotes.wsj.com/QCOM', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-qcom/qualcomm'),
+    array("wsjlink"  => 'https://quotes.wsj.com/O', "simplylink"  => 'https://simplywall.st/stocks/us/real-estate/nyse-o/realty-income'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/SAMPO', "simplylink"  => 'https://simplywall.st/stocks/fi/insurance/hel-sampo/sampo-oyj-shares'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FR/SOI', "simplylink"  => 'https://simplywall.st/stocks/fr/semiconductors/epa-soi/soitec-shares'),
+    array("wsjlink"  => 'https://quotes.wsj.com/V', "simplylink"  => 'https://simplywall.st/stocks/us/software/nyse-v/visa'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/YIT', "simplylink"  => 'https://simplywall.st/stocks/fi/capital-goods/hel-yit/yit-oyj-shares'),
+
+];
