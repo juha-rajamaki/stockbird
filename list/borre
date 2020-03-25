@@ -12,6 +12,7 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/O', "simplylink"  => 'https://simplywall.st/stocks/us/real-estate/nyse-o/realty-income'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/SAMPO', "simplylink"  => 'https://simplywall.st/stocks/fi/insurance/hel-sampo/sampo-oyj-shares'),
     array("wsjlink"  => 'https://quotes.wsj.com/FR/SOI', "simplylink"  => 'https://simplywall.st/stocks/fr/semiconductors/epa-soi/soitec-shares'),
+    array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplylink"  => 'https://simplywall.st/stocks/us/automobiles/nasdaq-tsla/tesla'),
     array("wsjlink"  => 'https://quotes.wsj.com/V', "simplylink"  => 'https://simplywall.st/stocks/us/software/nyse-v/visa'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/YIT', "simplylink"  => 'https://simplywall.st/stocks/fi/capital-goods/hel-yit/yit-oyj-shares'),
 
