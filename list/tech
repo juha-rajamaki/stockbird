@@ -1,0 +1,13 @@
+<?php
+
+$companies = [
+
+    array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplylink"  => 'https://simplywall.st/stocks/us/tech/nasdaq-aapl/apple'),
+    array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplylink"  => 'https://simplywall.st/stocks/us/automobiles/nasdaq-tsla/tesla'),
+    array("wsjlink"  => 'https://quotes.wsj.com/WORK', "simplylink"  => 'https://simplywall.st/stocks/us/software/nyse-work/slack-technologies'),
+    array("wsjlink"  => 'https://quotes.wsj.com/MU', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-mu/micron-technology'),
+    array("wsjlink"  => 'https://quotes.wsj.com/QCOM', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-qcom/qualcomm'),
+    array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-amd/advanced-micro-devices'),
+    array("wsjlink"  => 'https://quotes.wsj.com/INTC', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-intc/intel'),
+
+];
