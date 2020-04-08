@@ -2,10 +2,9 @@
 
 $companies = [
 
-    array("wsjlink"  => 'https://quotes.wsj.com/ATVI', "simplylink"  => 'https://simplywall.st/stocks/us/media/nasdaq-atvi/activision-blizzard'),
     array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplylink"  => 'https://simplywall.st/stocks/us/automobiles/nasdaq-tsla/tesla'),
+    array("wsjlink"  => 'https://quotes.wsj.com/WORK', "simplylink"  => 'https://simplywall.st/stocks/us/software/nyse-work/slack-technologies'),
     array("wsjlink"  => 'https://quotes.wsj.com/MU', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-mu/micron-technology'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/FORTUM', "simplylink"  => 'https://simplywall.st/stocks/fi/utilities/hel-fortum/fortum-oyj-shares'),
-    array("wsjlink"  => 'https://quotes.wsj.com/FI/REMEDY', "simplylink"  => 'https://simplywall.st/stocks/fi/media/hel-remedy/remedy-entertainment-oyj-shares'),
 
 ];

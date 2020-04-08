@@ -7,6 +7,7 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/NVDA', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-nvda/nvidia'),
     array("wsjlink"  => 'https://quotes.wsj.com/SPOT', "simplylink"  => 'https://simplywall.st/stocks/us/media/nyse-spot/spotify-technology'),
     array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplylink"  => 'https://simplywall.st/stocks/us/automobiles/nasdaq-tsla/tesla'),
+    array("wsjlink"  => 'https://quotes.wsj.com/WORK', "simplylink"  => 'https://simplywall.st/stocks/us/software/nyse-work/slack-technologies'),
     array("wsjlink"  => 'https://quotes.wsj.com/V', "simplylink"  => 'https://simplywall.st/stocks/us/software/nyse-v/visa'),
     array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-amd/advanced-micro-devices'),
     array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplylink"  => 'https://simplywall.st/stocks/us/tech/nasdaq-aapl/apple'),
@@ -23,5 +24,6 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/TWTR', "simplylink"  => 'https://simplywall.st/stocks/us/media/nyse-twtr/twitter'),
     array("wsjlink"  => 'https://quotes.wsj.com/SBUX', "simplylink"  => 'https://simplywall.st/stocks/us/consumer-services/nasdaq-sbux/starbucks'),
     array("wsjlink"  => 'https://quotes.wsj.com/ATVI', "simplylink"  => 'https://simplywall.st/stocks/us/media/nasdaq-atvi/activision-blizzard'),
+    array("wsjlink"  => 'https://quotes.wsj.com/EA', "simplylink"  => 'https://simplywall.st/stocks/us/media/nasdaq-ea/electronic-arts'),
 
 ];
