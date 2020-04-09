@@ -9,5 +9,6 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/QCOM', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-qcom/qualcomm'),
     array("wsjlink"  => 'https://quotes.wsj.com/AMD', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-amd/advanced-micro-devices'),
     array("wsjlink"  => 'https://quotes.wsj.com/INTC', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-intc/intel'),
-
+    array("wsjlink"  => 'https://quotes.wsj.com/NVDA', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-nvda/nvidia'),
+    
 ];
