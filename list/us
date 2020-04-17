@@ -25,5 +25,6 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/SBUX', "simplylink"  => 'https://simplywall.st/stocks/us/consumer-services/nasdaq-sbux/starbucks'),
     array("wsjlink"  => 'https://quotes.wsj.com/ATVI', "simplylink"  => 'https://simplywall.st/stocks/us/media/nasdaq-atvi/activision-blizzard'),
     array("wsjlink"  => 'https://quotes.wsj.com/EA', "simplylink"  => 'https://simplywall.st/stocks/us/media/nasdaq-ea/electronic-arts'),
+    array("wsjlink"  => 'https://quotes.wsj.com/EBAY', "simplylink"  => 'https://simplywall.st/stocks/us/retail/nasdaq-ebay/ebay'),
 
 ];
