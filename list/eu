@@ -20,5 +20,7 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/FI/SIILI', "simplylink"  => 'https://simplywall.st/stocks/fi/software/hel-siili/siili-solutions-oyj-shares'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/GOFORE', "simplylink"  => 'https://simplywall.st/stocks/fi/software/hel-gofore/gofore-oyj-shares'),
     array("wsjlink"  => 'https://quotes.wsj.com/FI/REMEDY', "simplylink"  => 'https://simplywall.st/stocks/fi/media/hel-remedy/remedy-entertainment-oyj-shares'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/ELISA', "simplylink"  => 'https://simplywall.st/stocks/fi/telecom/hel-elisa/elisa-oyj-shares'),
+    array("wsjlink"  => 'https://quotes.wsj.com/FI/VERK', "simplylink"  => 'https://simplywall.st/stocks/fi/retail/hel-verk/verkkokauppacom-oyj-shares'),
 
 ];
