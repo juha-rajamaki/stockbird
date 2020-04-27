@@ -224,4 +224,4 @@ $app		= 'app/';
 
 					echo "Performance of your list: $yourperformance%";
 
-					echo "\n\n";
+					echo "\n";
