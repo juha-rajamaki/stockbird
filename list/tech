@@ -2,8 +2,10 @@
 
 $companies = [
 
-    array("wsjlink"  => 'https://quotes.wsj.com/AAPL', "simplylink"  => 'https://simplywall.st/stocks/us/tech/nasdaq-aapl/apple'),
     array("wsjlink"  => 'https://quotes.wsj.com/TSLA', "simplylink"  => 'https://simplywall.st/stocks/us/automobiles/nasdaq-tsla/tesla'),
     array("wsjlink"  => 'https://quotes.wsj.com/NVDA', "simplylink"  => 'https://simplywall.st/stocks/us/semiconductors/nasdaq-nvda/nvidia'),
+    array("wsjlink"  => 'https://quotes.wsj.com/SPOT', "simplylink"  => 'https://simplywall.st/stocks/us/media/nyse-spot/spotify-technology'),
+    array("wsjlink"  => 'https://quotes.wsj.com/NFLX', "simplylink"  => 'https://simplywall.st/stocks/us/media/nasdaq-nflx/netflix'),
+    array("wsjlink"  => 'https://quotes.wsj.com/PYPL', "simplylink"  => 'https://simplywall.st/stocks/us/software/nasdaq-pypl/paypal-holdings'),
 
 ];
