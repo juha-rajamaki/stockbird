@@ -7,5 +7,8 @@ $companies = [
     array("wsjlink"  => 'https://quotes.wsj.com/PYPL', "simplylink"  => 'https://simplywall.st/stocks/us/software/nasdaq-pypl/paypal-holdings'),
     array("wsjlink"  => 'https://quotes.wsj.com/FVRR', "simplylink"  => 'https://simplywall.st/stocks/us/retail/nyse-fvrr/fiverr-international'),
     array("wsjlink"  => 'https://quotes.wsj.com/SQ', "simplylink"  => 'https://simplywall.st/stocks/us/software/nyse-sq/square'),
+    array("wsjlink"  => 'https://quotes.wsj.com/RVLV', "simplylink"  => 'https://simplywall.st/stocks/us/retail/nyse-rvlv/revolve-group'),
+    array("wsjlink"  => 'https://quotes.wsj.com/ILMN', "simplylink"  => 'https://simplywall.st/stocks/us/pharmaceuticals-biotech/nasdaq-ilmn/illumina'),
+
 
 ];
